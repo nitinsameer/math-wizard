@@ -1,135 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - Math Wizard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – BrightMinds | Nishaan Tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --purple: #6B3FA0;
+      --purple-light: #9B6DD8;
+      --purple-pale: #EDE9F8;
+      --gold: #F4B942;
+      --dark: #1A0E2E;
+      --body-bg: #F9F7FF;
+      --card-bg: #FFFFFF;
+      --text: #2D1B4E;
+      --muted: #7A6A8A;
+      --border: #E2D9F3;
+    }
 
-<style>
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-padding:0;
-background:#f5f7fb;
-color:#333;
-line-height:1.6;
-}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.header{
-background:linear-gradient(135deg,#5c6cff,#4bb8ff);
-color:white;
-padding:50px 20px;
-text-align:center;
-}
+    body {
+      background: var(--body-bg);
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
 
-.header h1{
-margin:0;
-font-size:36px;
-}
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1A0E2E 0%, #3D1F7A 55%, #6B3FA0 100%);
+      padding: 64px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:30px 20px;
-background:white;
-box-shadow:0 8px 30px rgba(0,0,0,0.05);
-border-radius:10px;
-margin-top:-40px;
-}
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244,185,66,0.15), transparent 70%);
+      top: -120px; right: -100px;
+      pointer-events: none;
+    }
 
-h2{
-color:#4b4bff;
-margin-top:30px;
-}
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(155,109,216,0.2), transparent 70%);
+      bottom: -80px; left: -60px;
+      pointer-events: none;
+    }
 
-.highlight{
-background:#eef3ff;
-padding:15px;
-border-left:4px solid #4b4bff;
-border-radius:6px;
-}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244,185,66,0.15);
+      border: 1px solid rgba(244,185,66,0.4);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
 
-.footer{
-text-align:center;
-margin-top:40px;
-padding:20px;
-font-size:14px;
-color:#777;
-}
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
 
-.company-box{
-background:#f9fbff;
-padding:20px;
-border-radius:8px;
-margin-bottom:20px;
-border:1px solid #e6ecff;
-}
-</style>
+    .hero h1 span { color: var(--gold); }
+
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-meta-item .label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .hero-meta-item .value {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--gold);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .trust-item svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .content-wrap {
+      padding: 60px 0 80px;
+    }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 40px;
+      margin-bottom: 48px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(107,63,160,0.08);
+    }
+
+    .intro-card::before {
+      content: '🔐';
+      font-size: 64px;
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.08;
+    }
+
+    .intro-card p {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .intro-card p + p { margin-top: 12px; }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .section-icon.purple { background: var(--purple-pale); }
+    .section-icon.gold   { background: rgba(244,185,66,0.15); }
+    .section-icon.green  { background: rgba(52,199,89,0.12); }
+    .section-icon.blue   { background: rgba(0,122,255,0.1); }
+    .section-icon.red    { background: rgba(255,59,48,0.1); }
+    .section-icon.teal   { background: rgba(90,200,250,0.12); }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .section-body {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 12px rgba(107,63,160,0.05);
+    }
+
+    .section-body p {
+      font-size: 15px;
+      color: #4A3A5C;
+      margin-bottom: 14px;
+    }
+
+    .section-body p:last-child { margin-bottom: 0; }
+
+    /* ── LIST ── */
+    .policy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .policy-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: #4A3A5C;
+    }
+
+    .policy-list li::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--purple-light);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--purple-pale), #f0ebff);
+      border-left: 4px solid var(--purple-light);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--purple);
+      font-weight: 500;
+    }
+
+    /* ── CHILDREN NOTICE ── */
+    .children-notice {
+      background: linear-gradient(135deg, #fff8e6, #fff3cc);
+      border: 1.5px solid var(--gold);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .children-notice .icon { font-size: 32px; flex-shrink: 0; }
+
+    .children-notice h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .children-notice p {
+      font-size: 14px;
+      color: #6B5A2E;
+      margin: 0;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--dark), #3D1F7A);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244,185,66,0.2), transparent 70%);
+      top: -60px; right: -40px;
+    }
+
+    .contact-card h2 {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .contact-email:hover { opacity: 0.85; }
+
+    .contact-details {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-details span {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .contact-details strong {
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer span { color: var(--purple); font-weight: 500; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    @media (max-width: 600px) {
+      .section-body { padding: 20px 20px; }
+      .intro-card   { padding: 24px 20px; }
+      .contact-card { padding: 28px 20px; }
+      .trust-strip  { gap: 16px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="header">
-<h1>Privacy Policy</h1>
-<p>Math Wizard – Kids Learning Game</p>
-</div>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      Privacy Policy
+    </div>
+    <h1>BrightMinds <span>Privacy</span><br/>Policy</h1>
+    <p>We believe every child deserves a safe, private, and joyful learning experience.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">Effective Date</span>
+        <span class="value">May 3, 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Last Updated</span>
+        <span class="value">May 3, 2026</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">App Version</span>
+        <span class="value">BrightMinds 1.0</span>
+      </div>
+    </div>
+  </div>
 
-<div class="container">
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      No Personal Data Collected
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      No Ads or Tracking
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      COPPA Compliant
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      100% Offline-First
+    </div>
+  </div>
 
-<p><strong>Last Updated:</strong> April 2026</p>
+  <!-- CONTENT -->
+  <div class="content-wrap">
+    <div class="container">
 
-<div class="company-box">
-<h2>About the Company</h2>
+      <!-- INTRO -->
+      <div class="intro-card">
+        <p>
+          This Privacy Policy describes how <strong>Nishaan Tech</strong> ("we," "us," or "our") handles information in connection with <strong>BrightMinds</strong> — a Grade 2 learning application designed for children aged 6–10 years.
+        </p>
+        <p>
+          We are deeply committed to protecting the privacy of children. BrightMinds is built from the ground up with privacy by design: <strong>no personal data leaves the device, no accounts are required, and all learning data stays local.</strong>
+        </p>
+        <p>
+          By downloading or using BrightMinds, parents and guardians confirm they have read and agree to this Privacy Policy.
+        </p>
+      </div>
 
-<p>
-<strong>Nishaan Tech</strong> is the developer and publisher of the mobile application <strong>Math Wizard</strong>. We are committed to providing a fun and educational gaming experience while respecting your privacy.
-</p>
+      <!-- 1. INFORMATION WE COLLECT -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon purple">📋</div>
+          <h2>1. Information We Collect</h2>
+        </div>
+        <div class="section-body">
+          <div class="highlight-box">
+            🛡️ BrightMinds does <strong>not</strong> collect, transmit, or store any personally identifiable information (PII) on external servers.
+          </div>
+          <p>The app stores the following data <strong>locally on your device only</strong>:</p>
+          <ul class="policy-list">
+            <li>Child's first name (entered voluntarily during setup, stored locally)</li>
+            <li>Selected avatar and app theme preference</li>
+            <li>Quiz scores, XP points, level, and badges earned</li>
+            <li>Daily challenge completion history and streak count</li>
+            <li>Chapter and set progress across all subjects</li>
+          </ul>
+          <p style="margin-top:16px;">None of this data is linked to any real-world identity or transmitted to Nishaan Tech's servers.</p>
+        </div>
+      </div>
 
-<p>
-Nishaan Tech builds safe and engaging educational apps for children.
-</p>
-</div>
+      <!-- 2. CHILDREN'S PRIVACY -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon gold">👦</div>
+          <h2>2. Children's Privacy (COPPA)</h2>
+        </div>
+        <div class="section-body">
+          <p>BrightMinds is directed at children under the age of 13. We fully comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and applicable data protection laws.</p>
+          <div class="children-notice">
+            <div class="icon">⭐</div>
+            <div>
+              <h3>Our Child-First Commitments</h3>
+              <p>We do not knowingly collect personal information from children. The app does not require registration, login, email, or phone number. Parental consent is obtained before the child begins using the app.</p>
+            </div>
+          </div>
+          <p style="margin-top: 16px;">A <strong>Parent/Guardian Consent screen</strong> is shown before first use, requiring a parent to confirm their identity through a simple math verification. Parents may contact us at any time to review or delete any locally stored data by uninstalling the app.</p>
+        </div>
+      </div>
 
-<h2>1. Information We Collect</h2>
+      <!-- 3. HOW WE USE INFORMATION -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon blue">⚙️</div>
+          <h2>3. How We Use Information</h2>
+        </div>
+        <div class="section-body">
+          <p>The locally stored data is used solely to:</p>
+          <ul class="policy-list">
+            <li>Display the child's name and avatar for a personalized experience</li>
+            <li>Track learning progress across subjects and chapters</li>
+            <li>Calculate XP, levels, streaks, and badges to motivate daily practice</li>
+            <li>Show parents a progress summary through the Parent Dashboard</li>
+            <li>Remember theme and avatar preferences between app sessions</li>
+          </ul>
+          <p style="margin-top:16px;">We do <strong>not</strong> use this information for advertising, profiling, behavioral analysis, or any commercial purpose.</p>
+        </div>
+      </div>
 
-<div class="highlight">
-We do <strong>NOT collect personal information</strong>.
-</div>
+      <!-- 4. OPTIONAL ANALYTICS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon teal">📊</div>
+          <h2>4. Optional Anonymous Analytics</h2>
+        </div>
+        <div class="section-body">
+          <p>During the consent flow, parents are given the option to allow <strong>anonymous, aggregated usage analytics</strong> to help us improve the app. This is <em>entirely optional</em> and can be declined without affecting any functionality.</p>
+          <p>If enabled, this analytics data:</p>
+          <ul class="policy-list">
+            <li>Contains no personally identifiable information</li>
+            <li>Includes only aggregate counts (e.g., how many users complete a chapter)</li>
+            <li>Is never linked to a specific child, device, or household</li>
+            <li>Is used only to identify bugs and improve question quality</li>
+          </ul>
+          <div class="highlight-box" style="margin-top:16px;">
+            Parents who initially opt-in can opt-out at any time by uninstalling the app or contacting us at nitinsameer@gmail.com.
+          </div>
+        </div>
+      </div>
 
-<ul>
-<li>No Name</li>
-<li>No Email</li>
-<li>No Phone</li>
-<li>No Location</li>
-</ul>
+      <!-- 5. DATA SHARING -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon red">🔒</div>
+          <h2>5. Data Sharing & Third Parties</h2>
+        </div>
+        <div class="section-body">
+          <p>We do <strong>not</strong> sell, rent, trade, or share any user data with third parties. Specifically:</p>
+          <ul class="policy-list">
+            <li>No advertising networks or ad SDKs are integrated into the app</li>
+            <li>No social media sharing or social login features are present</li>
+            <li>No third-party analytics SDKs that collect PII are used</li>
+            <li>No in-app purchases or payment processors are integrated</li>
+          </ul>
+          <p style="margin-top:16px;">The only exception would be if we are legally required to disclose information by applicable law or valid legal process, which is extremely unlikely given that we hold no personal data.</p>
+        </div>
+      </div>
 
-<h2>2. Children's Privacy</h2>
+      <!-- 6. DATA STORAGE & SECURITY -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon green">🛡️</div>
+          <h2>6. Data Storage & Security</h2>
+        </div>
+        <div class="section-body">
+          <p>All progress data is stored exclusively in the <strong>device's local storage</strong> (SharedPreferences / local database). This means:</p>
+          <ul class="policy-list">
+            <li>Data is stored on your device and does not travel over the internet</li>
+            <li>Uninstalling the app permanently deletes all locally stored data</li>
+            <li>No cloud backup or sync of learning data occurs</li>
+            <li>Data is protected by the device's own security (PIN, biometrics, etc.)</li>
+          </ul>
+          <p style="margin-top:16px;">The AI hint feature operates <strong>fully offline</strong> using an on-device model — no question or answer data is sent to any server.</p>
+        </div>
+      </div>
 
-<p>
-This app is designed for children under 13 and complies with child safety policies.
-</p>
+      <!-- 7. PARENTAL RIGHTS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon purple">👨‍👩‍👧</div>
+          <h2>7. Parental Rights & Controls</h2>
+        </div>
+        <div class="section-body">
+          <p>As a parent or guardian, you have full control over your child's data:</p>
+          <ul class="policy-list">
+            <li><strong>Access:</strong> The Parent Dashboard (accessible after a math-based verification) shows all stored progress data</li>
+            <li><strong>Delete:</strong> Use the "Reset All Progress" button inside the Parent Dashboard to wipe all stored data, or simply uninstall the app</li>
+            <li><strong>Opt-out:</strong> Analytics consent can be withdrawn at any time by contacting us</li>
+            <li><strong>Inquire:</strong> Email us at nitinsameer@gmail.com with any questions about data handling</li>
+          </ul>
+        </div>
+      </div>
 
-<h2>3. Permissions</h2>
+      <!-- 8. PERMISSIONS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon blue">📱</div>
+          <h2>8. App Permissions</h2>
+        </div>
+        <div class="section-body">
+          <p>BrightMinds requests only the minimum permissions necessary to function. The app does <strong>not</strong> request access to:</p>
+          <ul class="policy-list">
+            <li>Camera, microphone, or location</li>
+            <li>Contacts, call logs, or SMS</li>
+            <li>Photos, files, or external storage</li>
+            <li>Bluetooth or nearby devices</li>
+          </ul>
+          <p style="margin-top:16px;">The only device resource used is local storage to save progress data, which requires no special permission on modern Android versions.</p>
+        </div>
+      </div>
 
-<ul>
-<li>Internet – only for updates</li>
-</ul>
+      <!-- 9. CHANGES -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon gold">🔔</div>
+          <h2>9. Changes to This Policy</h2>
+        </div>
+        <div class="section-body">
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we do:</p>
+          <ul class="policy-list">
+            <li>We will update the "Last Updated" date at the top of this page</li>
+            <li>Significant changes will be communicated via an in-app notice</li>
+            <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
+          </ul>
+          <p style="margin-top:16px;">We encourage parents to review this policy periodically. The most current version is always available within the app under Profile → Privacy Policy.</p>
+        </div>
+      </div>
 
-<h2>4. Third-Party Services</h2>
+      <!-- 10. GOVERNING LAW -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon teal">⚖️</div>
+          <h2>10. Governing Law</h2>
+        </div>
+        <div class="section-body">
+          <p>This Privacy Policy is governed by the laws of <strong>India</strong>. By using BrightMinds, you agree that any disputes relating to this policy will be subject to the jurisdiction of courts in India.</p>
+          <p>We also strive to comply with international privacy regulations including COPPA (United States), GDPR (European Union), and DPDP Act 2023 (India) where applicable.</p>
+        </div>
+      </div>
 
-<p>No ads or analytics currently used.</p>
+      <!-- CONTACT -->
+      <div class="contact-card">
+        <h2>Get in Touch</h2>
+        <p>Have a question about your child's privacy or this policy? We're here to help.</p>
+        <a href="mailto:nitinsameer@gmail.com" class="contact-email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          nitinsameer@gmail.com
+        </a>
+        <div class="contact-details">
+          <span><strong>Nishaan Tech</strong></span>
+          <span>Developer of BrightMinds — Grade 2 Learning App</span>
+          <span>India</span>
+        </div>
+      </div>
 
-<h2>5. Contact</h2>
+    </div><!-- /container -->
+  </div><!-- /content-wrap -->
 
-<p>
-Email: nitinsameer@gmail.com
-</p>
-
-</div>
-
-<div class="footer">
-© 2026 Nishaan Tech
-</div>
+  <footer>
+    <p>© 2026 <span>Nishaan Tech</span>. All rights reserved. &nbsp;·&nbsp; BrightMinds is designed with ❤️ for young learners.</p>
+    <p style="margin-top: 6px;">This Privacy Policy was last updated on May 3, 2026.</p>
+  </footer>
 
 </body>
 </html>
